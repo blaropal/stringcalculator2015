@@ -32,5 +32,6 @@ public class CalculatorTest {
 	@Test
 	public void testChangedDelimiter(){
 		assertEquals(6, Calculator.add("//-\n1-2-3"));
+		assertEquals(8, Calculator.add("//s\n1s4s3"));
 	}
 }
