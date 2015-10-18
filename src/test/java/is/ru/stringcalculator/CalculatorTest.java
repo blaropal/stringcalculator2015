@@ -14,4 +14,8 @@ public class CalculatorTest {
 		assertEquals(0, Calculator.add(""));
 	}
 
+	@Test
+	public void testAddforTwo(){
+		assertEquals(4, Calculator.add("1,3"));
+	}
 }
