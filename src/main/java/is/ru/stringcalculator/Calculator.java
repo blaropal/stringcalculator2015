@@ -34,11 +34,10 @@ public class Calculator {
 	public static String exceptionMessage(String[] numbers){
 		String message = "";
 		int counter = 0;
-		message = "Negatives not allowed: ";
 		for(String number: numbers){
 			if(number.startsWith("-")){
 				if(counter == 0){
-					message = message + number;
+					message = "Negatives not allowed: " + number;
 				}else{
 					message = message + "," + number;
 				}
