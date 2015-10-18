@@ -28,4 +28,9 @@ public class CalculatorTest {
 	public void testAllowNewLine(){
 		assertEquals(4, Calculator.add("2\n2"));
 	}
+
+	@Test
+	public void testChangedDelimiter(){
+		assertEquals(6, Calculator.add("//-\n1-2-3"));
+	}
 }
