@@ -10,8 +10,8 @@ public class Calculator {
 	}
 
 	public static String[] extractNumbers(String numbers){
-		String newlist = numbers.replace('\n', ',');
-		return newlist.split(",");
+		numbers = numbers.replace('\n', ',');
+		return numbers.split(",");
 	}
 
 	public static int sum(String[] numbers){
