@@ -6,9 +6,16 @@ public class Calculator {
 		if(numbers.equals("")){
 			return 0;
 		}
+		return sum(extractNumbers(numbers));
+	}
+
+	public static String[] extractNumbers(String numbers){
+		return numbers.split(",");
+	}
+
+	public static int sum(String[] numbers){
 		int sum = 0;
-		String[] list = numbers.split(",");
-		for(String number : list){
+		for(String number : numbers){
 			sum += Integer.parseInt(number);
 		}
 		return sum;
