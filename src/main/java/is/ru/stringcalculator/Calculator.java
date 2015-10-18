@@ -26,7 +26,9 @@ public class Calculator {
 	public static int sum(String[] numbers){
 		int sum = 0;
 		for(String number : numbers){
-			sum += Integer.parseInt(number);
+			if(Integer.parseInt(number) < 1001){
+				sum += Integer.parseInt(number);
+			}
 		}
 		return sum;
 	}
