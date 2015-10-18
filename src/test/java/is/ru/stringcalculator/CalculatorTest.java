@@ -34,4 +34,14 @@ public class CalculatorTest {
 		assertEquals(6, Calculator.add("//-\n1-2-3"));
 		assertEquals(8, Calculator.add("//s\n1s4s3"));
 	}
+
+	@Test
+	public void testExceptionThrow(){
+		try{
+			assertEquals("Negatives not allowed: -1", Calculator.add("-1, 2"));
+		}
+		catch(Exception e){
+			
+		}
+	}
 }
