@@ -35,13 +35,9 @@ public class CalculatorTest {
 		assertEquals(8, Calculator.add("//s\n1s4s3"));
 	}
 
-	@Test
+	@Test(expected = IllegalArgumentException.class)
 	public void testExceptionThrow(){
-		try{
 			assertEquals("Negatives not allowed: -1", Calculator.add("-1, 2"));
-		}
-		catch(Exception e){
-			
-		}
+			assertEquals("Negatives not allowed: -4,-5", Calculator.add("2,-4,3,-5"));
 	}
 }
