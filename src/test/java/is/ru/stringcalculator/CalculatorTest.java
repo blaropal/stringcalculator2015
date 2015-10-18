@@ -23,4 +23,9 @@ public class CalculatorTest {
 	public void testAddforMany(){
 		assertEquals(10, Calculator.add("1,1,2,2,3,1"));
 	}
+
+	@Test
+	public void testAllowNewLine(){
+		assertEquals(4, Calculator.add("2\n2"));
+	}
 }
