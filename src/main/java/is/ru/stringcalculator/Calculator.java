@@ -11,17 +11,13 @@ public class Calculator {
 			numbers = numbers.substring(4);
 			return sum(extractNumbers(numbers, delimiter));
 		}
-		return sum(extractNumbers(numbers));
-	}
-
-	public static String[] extractNumbers(String numbers){
-		numbers = numbers.replace('\n', ',');
-		return numbers.split(",");
+		return sum(extractNumbers(numbers, ','));
 	}
 
 	public static String[] extractNumbers(String numbers, char delimiter){
-		String del = Character.toString(delimiter);
-		return numbers.split(del);
+		numbers = numbers.replace('\n', ',');
+		String deli = Character.toString(delimiter);
+		return numbers.split(deli);
 	}
 
 	public static int sum(String[] numbers){
